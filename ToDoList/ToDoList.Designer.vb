@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ToDoList
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,19 +20,19 @@ Partial Class ToDoList
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.btnActualizar = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.btnIngresar = New System.Windows.Forms.Button()
-        Me.cboEstado = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtTarea = New System.Windows.Forms.TextBox()
         Me.lblIngresar = New System.Windows.Forms.Label()
@@ -54,11 +54,13 @@ Partial Class ToDoList
         Me.DataGridViewButtonColumn4 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.DataGridViewButtonColumn5 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.DataGridViewButtonColumn6 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridViewImageColumn1
@@ -70,24 +72,32 @@ Partial Class ToDoList
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.dtpFecha)
         Me.GroupBox1.Controls.Add(Me.btnActualizar)
         Me.GroupBox1.Controls.Add(Me.btnSalir)
         Me.GroupBox1.Controls.Add(Me.btnNuevo)
         Me.GroupBox1.Controls.Add(Me.btnIngresar)
-        Me.GroupBox1.Controls.Add(Me.cboEstado)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txtTarea)
         Me.GroupBox1.Controls.Add(Me.lblIngresar)
-        Me.GroupBox1.Location = New System.Drawing.Point(142, 15)
+        Me.GroupBox1.Location = New System.Drawing.Point(117, 15)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(411, 126)
+        Me.GroupBox1.Size = New System.Drawing.Size(460, 126)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Gestionar las Tareas"
         '
+        'dtpFecha
+        '
+        Me.dtpFecha.CustomFormat = ""
+        Me.dtpFecha.Location = New System.Drawing.Point(237, 41)
+        Me.dtpFecha.Name = "dtpFecha"
+        Me.dtpFecha.Size = New System.Drawing.Size(200, 20)
+        Me.dtpFecha.TabIndex = 8
+        '
         'btnActualizar
         '
-        Me.btnActualizar.Location = New System.Drawing.Point(127, 67)
+        Me.btnActualizar.Location = New System.Drawing.Point(152, 67)
         Me.btnActualizar.Name = "btnActualizar"
         Me.btnActualizar.Size = New System.Drawing.Size(75, 34)
         Me.btnActualizar.TabIndex = 7
@@ -96,7 +106,7 @@ Partial Class ToDoList
         '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(289, 67)
+        Me.btnSalir.Location = New System.Drawing.Point(314, 67)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(75, 34)
         Me.btnSalir.TabIndex = 6
@@ -105,7 +115,7 @@ Partial Class ToDoList
         '
         'btnNuevo
         '
-        Me.btnNuevo.Location = New System.Drawing.Point(208, 67)
+        Me.btnNuevo.Location = New System.Drawing.Point(233, 67)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(75, 34)
         Me.btnNuevo.TabIndex = 5
@@ -114,33 +124,25 @@ Partial Class ToDoList
         '
         'btnIngresar
         '
-        Me.btnIngresar.Location = New System.Drawing.Point(46, 67)
+        Me.btnIngresar.Location = New System.Drawing.Point(71, 67)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(75, 34)
         Me.btnIngresar.TabIndex = 4
         Me.btnIngresar.Text = "Ingresar"
         Me.btnIngresar.UseVisualStyleBackColor = True
         '
-        'cboEstado
-        '
-        Me.cboEstado.FormattingEnabled = True
-        Me.cboEstado.Location = New System.Drawing.Point(240, 41)
-        Me.cboEstado.Name = "cboEstado"
-        Me.cboEstado.Size = New System.Drawing.Size(145, 21)
-        Me.cboEstado.TabIndex = 3
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(237, 25)
+        Me.Label2.Location = New System.Drawing.Point(234, 25)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(96, 13)
+        Me.Label2.Size = New System.Drawing.Size(70, 13)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Estado de la tarea:"
+        Me.Label2.Text = "Fecha Limite:"
         '
         'txtTarea
         '
-        Me.txtTarea.Location = New System.Drawing.Point(29, 41)
+        Me.txtTarea.Location = New System.Drawing.Point(26, 41)
         Me.txtTarea.Name = "txtTarea"
         Me.txtTarea.Size = New System.Drawing.Size(205, 20)
         Me.txtTarea.TabIndex = 1
@@ -148,7 +150,7 @@ Partial Class ToDoList
         'lblIngresar
         '
         Me.lblIngresar.AutoSize = True
-        Me.lblIngresar.Location = New System.Drawing.Point(26, 25)
+        Me.lblIngresar.Location = New System.Drawing.Point(23, 25)
         Me.lblIngresar.Name = "lblIngresar"
         Me.lblIngresar.Size = New System.Drawing.Size(84, 13)
         Me.lblIngresar.TabIndex = 0
@@ -210,11 +212,11 @@ Partial Class ToDoList
         '
         'DataGridViewButtonColumn1
         '
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        Me.DataGridViewButtonColumn1.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        Me.DataGridViewButtonColumn1.DefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridViewButtonColumn1.Frozen = True
         Me.DataGridViewButtonColumn1.HeaderText = "Editar"
         Me.DataGridViewButtonColumn1.Name = "DataGridViewButtonColumn1"
@@ -227,9 +229,9 @@ Partial Class ToDoList
         '
         'DataGridViewButtonColumn2
         '
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewButtonColumn2.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewButtonColumn2.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridViewButtonColumn2.Frozen = True
         Me.DataGridViewButtonColumn2.HeaderText = "Completar"
         Me.DataGridViewButtonColumn2.Name = "DataGridViewButtonColumn2"
@@ -308,11 +310,11 @@ Partial Class ToDoList
         '
         'DataGridViewButtonColumn4
         '
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
-        Me.DataGridViewButtonColumn4.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        Me.DataGridViewButtonColumn4.DefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridViewButtonColumn4.Frozen = True
         Me.DataGridViewButtonColumn4.HeaderText = "Editar"
         Me.DataGridViewButtonColumn4.Name = "DataGridViewButtonColumn4"
@@ -325,9 +327,9 @@ Partial Class ToDoList
         '
         'DataGridViewButtonColumn5
         '
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewButtonColumn5.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewButtonColumn5.DefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridViewButtonColumn5.Frozen = True
         Me.DataGridViewButtonColumn5.HeaderText = "Completar"
         Me.DataGridViewButtonColumn5.Name = "DataGridViewButtonColumn5"
@@ -350,11 +352,20 @@ Partial Class ToDoList
         Me.DataGridViewButtonColumn6.UseColumnTextForButtonValue = True
         Me.DataGridViewButtonColumn6.Width = 60
         '
+        'DataGridView3
+        '
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Location = New System.Drawing.Point(12, 542)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.Size = New System.Drawing.Size(494, 150)
+        Me.DataGridView3.TabIndex = 5
+        '
         'ToDoList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(695, 522)
+        Me.ClientSize = New System.Drawing.Size(695, 724)
+        Me.Controls.Add(Me.DataGridView3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox1)
@@ -371,6 +382,7 @@ Partial Class ToDoList
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -379,7 +391,6 @@ Partial Class ToDoList
     Friend WithEvents btnSalir As Button
     Friend WithEvents btnNuevo As Button
     Friend WithEvents btnIngresar As Button
-    Friend WithEvents cboEstado As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents txtTarea As TextBox
     Friend WithEvents lblIngresar As Label
@@ -402,4 +413,6 @@ Partial Class ToDoList
     Friend WithEvents DataGridViewButtonColumn4 As DataGridViewButtonColumn
     Friend WithEvents DataGridViewButtonColumn5 As DataGridViewButtonColumn
     Friend WithEvents DataGridViewButtonColumn6 As DataGridViewButtonColumn
+    Friend WithEvents dtpFecha As DateTimePicker
+    Friend WithEvents DataGridView3 As DataGridView
 End Class
