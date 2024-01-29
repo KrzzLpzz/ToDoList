@@ -22,10 +22,6 @@ Partial Class ToDoList
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
@@ -39,22 +35,16 @@ Partial Class ToDoList
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewButtonColumn1 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.DataGridViewButtonColumn2 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.DataGridViewButtonColumn3 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewButtonColumn4 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.DataGridViewButtonColumn5 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.DataGridViewButtonColumn6 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -179,80 +169,12 @@ Partial Class ToDoList
         Me.DataGridView2.AllowUserToAddRows = False
         Me.DataGridView2.AllowUserToDeleteRows = False
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewButtonColumn1, Me.DataGridViewButtonColumn2, Me.DataGridViewButtonColumn3})
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.DataGridView2.Location = New System.Drawing.Point(20, 44)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
         Me.DataGridView2.Size = New System.Drawing.Size(624, 115)
         Me.DataGridView2.TabIndex = 0
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.Frozen = True
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Tarea"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Width = 200
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.Frozen = True
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Fecha Limite"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        Me.DataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.Frozen = True
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Estado"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        Me.DataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        '
-        'DataGridViewButtonColumn1
-        '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        Me.DataGridViewButtonColumn1.DefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridViewButtonColumn1.Frozen = True
-        Me.DataGridViewButtonColumn1.HeaderText = "Editar"
-        Me.DataGridViewButtonColumn1.Name = "DataGridViewButtonColumn1"
-        Me.DataGridViewButtonColumn1.ReadOnly = True
-        Me.DataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewButtonColumn1.Text = "Editar"
-        Me.DataGridViewButtonColumn1.ToolTipText = "Editar la Tarea"
-        Me.DataGridViewButtonColumn1.UseColumnTextForButtonValue = True
-        Me.DataGridViewButtonColumn1.Width = 60
-        '
-        'DataGridViewButtonColumn2
-        '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewButtonColumn2.DefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridViewButtonColumn2.Frozen = True
-        Me.DataGridViewButtonColumn2.HeaderText = "Completar"
-        Me.DataGridViewButtonColumn2.Name = "DataGridViewButtonColumn2"
-        Me.DataGridViewButtonColumn2.ReadOnly = True
-        Me.DataGridViewButtonColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewButtonColumn2.Text = "Completar"
-        Me.DataGridViewButtonColumn2.ToolTipText = "Completar la Tarea"
-        Me.DataGridViewButtonColumn2.UseColumnTextForButtonValue = True
-        Me.DataGridViewButtonColumn2.Width = 60
-        '
-        'DataGridViewButtonColumn3
-        '
-        Me.DataGridViewButtonColumn3.Frozen = True
-        Me.DataGridViewButtonColumn3.HeaderText = "Eliminar"
-        Me.DataGridViewButtonColumn3.Name = "DataGridViewButtonColumn3"
-        Me.DataGridViewButtonColumn3.ReadOnly = True
-        Me.DataGridViewButtonColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewButtonColumn3.Text = "Eliminar"
-        Me.DataGridViewButtonColumn3.ToolTipText = "Eliminar la Tarea"
-        Me.DataGridViewButtonColumn3.UseColumnTextForButtonValue = True
-        Me.DataGridViewButtonColumn3.Width = 60
         '
         'GroupBox2
         '
@@ -277,12 +199,20 @@ Partial Class ToDoList
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewButtonColumn4, Me.DataGridViewButtonColumn5, Me.DataGridViewButtonColumn6})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.DataGridView1.Location = New System.Drawing.Point(20, 44)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(624, 115)
         Me.DataGridView1.TabIndex = 0
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Location = New System.Drawing.Point(12, 542)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.Size = New System.Drawing.Size(494, 150)
+        Me.DataGridView3.TabIndex = 5
         '
         'DataGridViewTextBoxColumn4
         '
@@ -299,6 +229,7 @@ Partial Class ToDoList
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         Me.DataGridViewTextBoxColumn5.ReadOnly = True
         Me.DataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn5.Width = 165
         '
         'DataGridViewTextBoxColumn6
         '
@@ -308,57 +239,30 @@ Partial Class ToDoList
         Me.DataGridViewTextBoxColumn6.ReadOnly = True
         Me.DataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
-        'DataGridViewButtonColumn4
+        'DataGridViewTextBoxColumn1
         '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
-        Me.DataGridViewButtonColumn4.DefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridViewButtonColumn4.Frozen = True
-        Me.DataGridViewButtonColumn4.HeaderText = "Editar"
-        Me.DataGridViewButtonColumn4.Name = "DataGridViewButtonColumn4"
-        Me.DataGridViewButtonColumn4.ReadOnly = True
-        Me.DataGridViewButtonColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewButtonColumn4.Text = "Editar"
-        Me.DataGridViewButtonColumn4.ToolTipText = "Editar la Tarea"
-        Me.DataGridViewButtonColumn4.UseColumnTextForButtonValue = True
-        Me.DataGridViewButtonColumn4.Width = 60
+        Me.DataGridViewTextBoxColumn1.Frozen = True
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Tarea"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Width = 200
         '
-        'DataGridViewButtonColumn5
+        'DataGridViewTextBoxColumn2
         '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridViewButtonColumn5.DefaultCellStyle = DataGridViewCellStyle4
-        Me.DataGridViewButtonColumn5.Frozen = True
-        Me.DataGridViewButtonColumn5.HeaderText = "Completar"
-        Me.DataGridViewButtonColumn5.Name = "DataGridViewButtonColumn5"
-        Me.DataGridViewButtonColumn5.ReadOnly = True
-        Me.DataGridViewButtonColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewButtonColumn5.Text = "Completar"
-        Me.DataGridViewButtonColumn5.ToolTipText = "Completar la Tarea"
-        Me.DataGridViewButtonColumn5.UseColumnTextForButtonValue = True
-        Me.DataGridViewButtonColumn5.Width = 60
+        Me.DataGridViewTextBoxColumn2.Frozen = True
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Fecha Limite"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn2.Width = 165
         '
-        'DataGridViewButtonColumn6
+        'DataGridViewTextBoxColumn3
         '
-        Me.DataGridViewButtonColumn6.Frozen = True
-        Me.DataGridViewButtonColumn6.HeaderText = "Eliminar"
-        Me.DataGridViewButtonColumn6.Name = "DataGridViewButtonColumn6"
-        Me.DataGridViewButtonColumn6.ReadOnly = True
-        Me.DataGridViewButtonColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewButtonColumn6.Text = "Eliminar"
-        Me.DataGridViewButtonColumn6.ToolTipText = "Eliminar la Tarea"
-        Me.DataGridViewButtonColumn6.UseColumnTextForButtonValue = True
-        Me.DataGridViewButtonColumn6.Width = 60
-        '
-        'DataGridView3
-        '
-        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView3.Location = New System.Drawing.Point(12, 542)
-        Me.DataGridView3.Name = "DataGridView3"
-        Me.DataGridView3.Size = New System.Drawing.Size(494, 150)
-        Me.DataGridView3.TabIndex = 5
+        Me.DataGridViewTextBoxColumn3.Frozen = True
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Estado"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
         'ToDoList
         '
@@ -396,23 +300,17 @@ Partial Class ToDoList
     Friend WithEvents lblIngresar As Label
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewButtonColumn1 As DataGridViewButtonColumn
-    Friend WithEvents DataGridViewButtonColumn2 As DataGridViewButtonColumn
-    Friend WithEvents DataGridViewButtonColumn3 As DataGridViewButtonColumn
     Friend WithEvents btnActualizar As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dtpFecha As DateTimePicker
+    Friend WithEvents DataGridView3 As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewButtonColumn4 As DataGridViewButtonColumn
-    Friend WithEvents DataGridViewButtonColumn5 As DataGridViewButtonColumn
-    Friend WithEvents DataGridViewButtonColumn6 As DataGridViewButtonColumn
-    Friend WithEvents dtpFecha As DateTimePicker
-    Friend WithEvents DataGridView3 As DataGridView
 End Class
