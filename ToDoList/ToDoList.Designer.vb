@@ -360,7 +360,7 @@ Partial Class ToDoList
         'Timer1
         '
         Me.Timer1.Enabled = True
-        Me.Timer1.Interval = 5000
+        Me.Timer1.Interval = 10000
         '
         'ToDoList
         '

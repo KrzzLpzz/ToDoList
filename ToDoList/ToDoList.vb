@@ -8,7 +8,7 @@ Public Class ToDoList
     Dim _FECHA As String ' Variable para almacenar la fecha
     Dim _ESTADO As String ' Variable para almacenar el estado
     Private rnd As New Random()
-    Dim randomValue As String
+    Dim randomValue As String ' Variable para almacenar el valor ramdom obtenido de las tareas pendientes
 
     ' Funcion que nos permite hacer la lectura y envio del texto de la tarea
     Private Property TAREA As String
@@ -42,8 +42,8 @@ Public Class ToDoList
 
     Private Sub ToDoList_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ReadTXT() ' lee el texto del archivo de texto
-        Notificacion()
-        Timer1.Start()
+        Notificacion() ' Carga la notificacion
+        Timer1.Start() ' Arranca el timer para que salte la notificacion cada x segundos
 
         cboEstado.SelectedIndex = 0 ' Configura el valor predeterminado seleccionado
     End Sub
@@ -261,24 +261,28 @@ Public Class ToDoList
         cboEstado.Text = ESTADO
     End Sub
 
-    ' Notificacion
+    ' Funcion que nos permite mandar una notificacion
     Private Sub Notificacion()
-        ChooseRandomElement()
+        ChooseRandomElement() ' Cargamos la funcion que elige el dato random de la notificacion
+
         ' Configurar NotifyIcon
-        NotifyIcon1.BalloonTipIcon = ToolTipIcon.Info
-        NotifyIcon1.BalloonTipTitle = "Tienes tareas pendientes"
-        NotifyIcon1.BalloonTipText = "Estimado usuario, tienes la tarea '" & randomValue & "' pendiente."
-        NotifyIcon1.ShowBalloonTip(5000)
+        NotifyIcon1.BalloonTipIcon = ToolTipIcon.Info ' Configuramos el tipo de notificacion
+        NotifyIcon1.BalloonTipTitle = "Tienes tareas pendientes" ' Configuramos el titulo
+        NotifyIcon1.BalloonTipText = "Estimado usuario, tienes la tarea '" & randomValue & "' pendiente. Da clic en el icono de la barra de tareas para abrir el programa y obtener más información." ' Configuramos el mensaje
+        NotifyIcon1.ShowBalloonTip(5000) ' Configuramos el tiempo que queremos que se mantenga en pantalla la notificacion
     End Sub
 
+    ' Funcion que controla lo que hace el tooltip del Notify
     Private Sub AbrirAplicaciónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AbrirAplicaciónToolStripMenuItem.Click
-        Me.WindowState = vbNormal
+        Me.WindowState = vbNormal ' En caso de que la ventana esté minimizada la restaura.
     End Sub
 
+    ' Funcion que controla cada cuanto aparece la notificacion
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Notificacion()
     End Sub
 
+    ' Funcion para elegir un item pendiente al azar de la columna tareas
     Private Sub ChooseRandomElement()
         ' Verificar si hay al menos una fila en el DataGridView
         If dgvPendientes.Rows.Count > 0 Then
@@ -292,7 +296,8 @@ Public Class ToDoList
         End If
     End Sub
 
+    ' Funcion que controla lo que hace el icono del Notify
     Private Sub NotifyIcon1_Click(sender As Object, e As EventArgs) Handles NotifyIcon1.Click
-        Me.WindowState = vbNormal
+        Me.WindowState = vbNormal ' En caso de que la ventana esté minimizada la restaura.
     End Sub
 End Class
