@@ -22,6 +22,8 @@ Partial Class ToDoList
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ToDoList))
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnEliminar = New System.Windows.Forms.Button()
@@ -51,12 +53,17 @@ Partial Class ToDoList
         Me.EstadoP = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.lblBuscar = New System.Windows.Forms.Label()
+        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.AbrirAplicaciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.dgvCompletadas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvLoad, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvPendientes, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataGridViewImageColumn1
@@ -331,6 +338,30 @@ Partial Class ToDoList
         Me.lblBuscar.TabIndex = 5
         Me.lblBuscar.Text = "Buscar:"
         '
+        'NotifyIcon1
+        '
+        Me.NotifyIcon1.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
+        Me.NotifyIcon1.Text = "Tareas Pendientes"
+        Me.NotifyIcon1.Visible = True
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AbrirAplicaciónToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(160, 26)
+        '
+        'AbrirAplicaciónToolStripMenuItem
+        '
+        Me.AbrirAplicaciónToolStripMenuItem.Name = "AbrirAplicaciónToolStripMenuItem"
+        Me.AbrirAplicaciónToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.AbrirAplicaciónToolStripMenuItem.Text = "Abrir Aplicación"
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 5000
+        '
         'ToDoList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -353,6 +384,7 @@ Partial Class ToDoList
         CType(Me.dgvLoad, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.dgvPendientes, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -386,4 +418,8 @@ Partial Class ToDoList
     Friend WithEvents EstadoP As DataGridViewTextBoxColumn
     Friend WithEvents txtBuscar As TextBox
     Friend WithEvents lblBuscar As Label
+    Friend WithEvents NotifyIcon1 As NotifyIcon
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents AbrirAplicaciónToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Timer1 As Timer
 End Class

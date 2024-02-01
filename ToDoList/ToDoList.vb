@@ -1,11 +1,14 @@
 ﻿Imports System.IO
 Imports System.Text.RegularExpressions
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports System.Random
 
 Public Class ToDoList
     Dim _TAREA As String ' Variable para almacenar las tareas
     Dim _FECHA As String ' Variable para almacenar la fecha
     Dim _ESTADO As String ' Variable para almacenar el estado
+    Private rnd As New Random()
+    Dim randomValue As String
 
     ' Funcion que nos permite hacer la lectura y envio del texto de la tarea
     Private Property TAREA As String
@@ -39,6 +42,8 @@ Public Class ToDoList
 
     Private Sub ToDoList_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ReadTXT() ' lee el texto del archivo de texto
+        Notificacion()
+        Timer1.Start()
 
         cboEstado.SelectedIndex = 0 ' Configura el valor predeterminado seleccionado
     End Sub
@@ -254,5 +259,40 @@ Public Class ToDoList
         txtTarea.Text = TAREA
         dtpFecha.Text = FECHA
         cboEstado.Text = ESTADO
+    End Sub
+
+    ' Notificacion
+    Private Sub Notificacion()
+        ChooseRandomElement()
+        ' Configurar NotifyIcon
+        NotifyIcon1.BalloonTipIcon = ToolTipIcon.Info
+        NotifyIcon1.BalloonTipTitle = "Tienes tareas pendientes"
+        NotifyIcon1.BalloonTipText = "Estimado usuario, tienes la tarea '" & randomValue & "' pendiente."
+        NotifyIcon1.ShowBalloonTip(5000)
+    End Sub
+
+    Private Sub AbrirAplicaciónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AbrirAplicaciónToolStripMenuItem.Click
+        Me.WindowState = vbNormal
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Notificacion()
+    End Sub
+
+    Private Sub ChooseRandomElement()
+        ' Verificar si hay al menos una fila en el DataGridView
+        If dgvPendientes.Rows.Count > 0 Then
+            ' Obtener un índice aleatorio dentro del rango de filas
+            Dim randomRowIndex As Integer = rnd.Next(0, dgvPendientes.Rows.Count)
+
+            ' Obtener el valor de la primera columna en la fila seleccionada al azar
+            randomValue = dgvPendientes.Rows(randomRowIndex).Cells(0).Value.ToString()
+        Else
+            MessageBox.Show("No hay filas en el DataGridView.")
+        End If
+    End Sub
+
+    Private Sub NotifyIcon1_Click(sender As Object, e As EventArgs) Handles NotifyIcon1.Click
+        Me.WindowState = vbNormal
     End Sub
 End Class
