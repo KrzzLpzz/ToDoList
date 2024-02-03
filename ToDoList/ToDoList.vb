@@ -277,6 +277,11 @@ Public Class ToDoList
         Me.WindowState = vbNormal ' En caso de que la ventana esté minimizada la restaura.
     End Sub
 
+    ' Funcion que controla lo que hace el icono del Notify
+    Private Sub NotifyIcon1_Click(sender As Object, e As EventArgs) Handles NotifyIcon1.Click
+        Me.WindowState = vbNormal ' En caso de que la ventana esté minimizada la restaura.
+    End Sub
+
     ' Funcion que controla cada cuanto aparece la notificacion
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Notificacion()
@@ -294,10 +299,5 @@ Public Class ToDoList
         Else
             MessageBox.Show("No hay filas en el DataGridView.")
         End If
-    End Sub
-
-    ' Funcion que controla lo que hace el icono del Notify
-    Private Sub NotifyIcon1_Click(sender As Object, e As EventArgs) Handles NotifyIcon1.Click
-        Me.WindowState = vbNormal ' En caso de que la ventana esté minimizada la restaura.
     End Sub
 End Class
